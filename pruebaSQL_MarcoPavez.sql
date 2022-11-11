@@ -129,9 +129,9 @@ FROM modelamiento_tienda.boletacompra;
 SELECT SUM(stock) AS cantidadProductos_comprados, SUM(stock*precioProducto) AS inversion_total
 FROM modelamiento_tienda.productos;
 
-#La siguiente query tiene por finalidad restar la inversion total pero tiene un error, la suma de stock*precioProducto da un valor incorrecto (115500 en lugar de 130500), asumo que por perdida de datos luego del INNER JOIN
-#Con todo, la finalidad de la query era tener la resta de total_ventas (ganancias) respecto a la inversion_total (gastos). Esto se podia realizar cambiando la coma de la linea 133 por un signo - 
-#SELECT SUM(DISTINCT stock*precioProducto) AS inversion_total, SUM(DISTINCT precioCompra) AS total_ventas
+#La finalidad de la siguiente query es tener la resta de total_ventas (ganancias) respecto a la inversion_total (gastos), pero tiene un error: la suma de stock*precioProducto da un valor incorrecto (115500 en lugar de 130500), asumo que por perdida de datos luego del INNER JOIN
+#Esta resta se puede realizar cambiando la coma de la linea 134 por un signo - 
+#SELECT SUM(DISTINCT precioCompra) AS total_ventas, SUM(DISTINCT stock*precioProducto) AS inversion_total
 #FROM modelamiento_tienda.productos
 #INNER JOIN modelamiento_tienda.boletacompra ON boletacompra.producto_id = productos.producto_id;
 
