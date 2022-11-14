@@ -1,1 +1,1 @@
-# En este repositorio se subirán todas las pruebas requeridas del curso Generation Cohorte 3
+# En este repositorio se subirán todas las pruebas requeridas de Generation Cohorte 3
